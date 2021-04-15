@@ -11,7 +11,7 @@ If your model [is uploaded to HuggingFace](https://huggingface.co/models?pipelin
 
 For custom models the idea is the following:
 
-1. Train your model *outside* of this Colab. This Colab is supposed to inference already pretrained models.
+1. Train your model *outside* of this notebook. This notebook is supposed to inference from already pretrained models.
 3. Ensure you have a way to call your model *from within Python code* and get a string. That means if you infer text via calling external script -- something like `!python main.py --predict output.txt`) -- you need to examine the inference code of the script and write some sort of a function or an object that will handle your inference and return strings to you.
 2. Discard all of the code that goes before `import google.colab.output` and copy your own code that loads and prepares your model.
 5. Use the `ai_generate` function to connect your model to the JS:
